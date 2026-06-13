@@ -24,3 +24,20 @@ Before running the script, ensure you have the following:
 ```bash
 git clone [https://github.com/YOUR_USERNAME/meraki-exporter.git](https://github.com/YOUR_USERNAME/meraki-exporter.git)
 cd meraki-exporter
+
+### 2. Install Dependencies
+Install the official Cisco Meraki Python SDK:
+```bash
+pip install meraki
+
+### 3. Run the Script
+Execute the script. You will be securely prompted to input your API token (the input characters will be completely hidden for security):
+```bash
+python meraki-archive-script-via-api.py
+
+### Output Manifest
+Once execution completes, the script generates a standalone, timestamped data matrix in the root directory:
+```bash
+.
+├── meraki-archive-script-via-api.py
+└── meraki_safe_backup_YYYYMMDD_HHMMSS.json  <-- Complete Infrastructure Backup
